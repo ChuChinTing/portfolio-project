@@ -4,25 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>地平線 · 風景與旅拍攝影作品集</title>
-<meta name="description" content="{{ 你的名字 }} — 風景與旅拍攝影作品集。記錄山徑、海岸與異地城市的光線與地形。">
-<meta name="author" content="{{ 你的名字 }}">
+<meta name="description" content="風景與旅拍攝影作品集。記錄山徑、海岸與異地城市的光線與地形。">
+<meta name="author" content="">
 <meta property="og:type" content="website">
 <meta property="og:title" content="地平線 Horizonline · 風景與旅拍攝影">
-<meta property="og:description" content="{{ 你的名字 }} — 風景與旅拍攝影作品集。記錄山徑、海岸與異地城市的光線與地形。">
-<meta property="og:image" content="{{ https://你的網域/assets/images/og.jpg }}">
+<meta property="og:description" content="風景與旅拍攝影作品集。記錄山徑、海岸與異地城市的光線與地形。">
+<meta property="og:image" content="">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="地平線 Horizonline · 風景與旅拍攝影">
-<meta name="twitter:description" content="{{ 你的名字 }} — 風景與旅拍攝影作品集。">
-<meta name="twitter:image" content="{{ https://你的網域/assets/images/og.jpg }}">
+<meta name="twitter:description" content="風景與旅拍攝影作品集。">
+<meta name="twitter:image" content="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   自訂設定：搜尋 {{ }} 標記處替換為你的真實資訊
-   照片替換：搜尋 class="ph" 的區塊，改成 <img src="你的照片.jpg" class="ph-img">
-   ============================================================ */
+/* 前台文案與照片：請到 /admin/ 後台編輯 content/site.json */
 
 :root{
   --black:#0b0b0a;
@@ -358,7 +355,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#top">地平線 Horizonline</a>
+    <a class="logo" href="#top" data-field="site_name">地平線 Horizonline</a>
     <nav>
       <ul>
         <li><a href="#work">作品</a></li>
@@ -372,165 +369,81 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 <main id="top">
 
-  <!-- ================= HERO ================= -->
   <section class="hero">
     <div class="horizon-line"></div>
     <div class="wrap">
       <div class="hero-meta reveal">
-        <span class="eyebrow">風景 · 旅拍攝影</span>
-        <span class="hero-coords">23.6978° N, 120.9605° E<br>{{ 你的拍攝據點 / 台灣 }}</span>
+        <span class="eyebrow" data-field="hero.eyebrow">風景 · 旅拍攝影</span>
+        <span class="hero-coords" data-field="hero.coords"></span>
       </div>
-      <h1 class="hero-title reveal">在世界的<br><em>邊界</em>與光線相遇</h1>
-      <p class="hero-sub reveal">{{ 你的名字 }}，長期於山徑、海岸與異地城市間移動的風景攝影師。用鏡頭記錄地形的呼吸與旅程中稍縱即逝的光。</p>
+      <h1 class="hero-title reveal" data-field="hero.title">在世界的<br><em>邊界</em>與光線相遇</h1>
+      <p class="hero-sub reveal" data-field="hero.subtitle"></p>
       <div class="hero-bottom reveal">
-        <span class="scroll-cue"><span class="dot"></span>向下捲動，進入作品集</span>
-        <span class="hero-coords">EST. {{ 2019 }}</span>
+        <span class="scroll-cue" data-field="hero.scroll_cue"><span class="dot"></span><span class="label">向下捲動，進入作品集</span></span>
+        <span class="hero-coords" data-field="hero.established"></span>
       </div>
     </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
   <section class="about" id="about">
     <div class="wrap about-grid">
-      <div class="frame about-frame reveal">
+      <div class="frame about-frame reveal" id="about-portrait">
         <div class="ph"><span class="ph-label">攝影師肖像照<br>PORTRAIT.JPG</span></div>
-        <!-- 替換：<img src="portrait.jpg" class="ph-img" alt="攝影師肖像"> -->
       </div>
       <div class="about-text reveal">
         <span class="eyebrow" style="margin-bottom:26px;">關於我</span>
-        <p class="lead">我相信風景不是被拍下來的，而是被走過、被等待、被理解之後，才被交出來的。</p>
-        <p>從 {{ 城市／國家 }} 出發，這些年走過 {{ 15 }} 個國家與無數條山路。我的作品專注於自然地景中光線、天氣與尺度的變化，也記錄旅途中人與土地相處的痕跡。</p>
-        <p>每一次拍攝都是一次長時間的停留——等一道雲隙光、一場退潮，或是一個當地人願意分享的日常。</p>
+        <p class="lead" data-field="about.lead"></p>
+        <p data-field="about.body_1"></p>
+        <p data-field="about.body_2"></p>
         <div class="about-stats">
-          <div class="stat"><b>{{ 42 }}</b><span>國家 / 地區</span></div>
-          <div class="stat"><b>{{ 8 }}</b><span>年 · 拍攝經驗</span></div>
-          <div class="stat"><b>{{ 30 }}</b><span>品牌合作案</span></div>
+          <div class="stat"><b data-field="about.stat_1_value"></b><span data-field="about.stat_1_label"></span></div>
+          <div class="stat"><b data-field="about.stat_2_value"></b><span data-field="about.stat_2_label"></span></div>
+          <div class="stat"><b data-field="about.stat_3_value"></b><span data-field="about.stat_3_label"></span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= WORK ================= -->
   <section id="work">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2>精選作品</h2>
-        <p>依拍攝地點與時間標記，每一幀都附上實際座標——如同影像的出生證明。</p>
+        <h2 data-field="work_section.title">精選作品</h2>
+        <p data-field="work_section.intro"></p>
       </div>
-
-      <div class="work-grid">
-
-        <div class="work-item reveal">
-          <div class="frame"><div class="ph"><span class="ph-label">作品照片 01<br>WORK-01.JPG（橫幅 16:9）</span></div></div>
-          <div class="work-caption">
-            <h3>{{ 作品標題，例如：稜線之上 }}</h3>
-            <div class="work-coords">{{ 24.1477° N, 121.1785° E }}<br>{{ 地點名稱 · 2024 }}</div>
-          </div>
-        </div>
-
-        <div class="work-item pair reveal">
-          <div class="frame"><div class="ph"><span class="ph-label">作品照片 02<br>WORK-02.JPG（直幅 4:5）</span></div></div>
-          <div class="frame"><div class="ph"><span class="ph-label">作品照片 03<br>WORK-03.JPG（直幅 4:5）</span></div></div>
-        </div>
-        <div class="work-caption reveal" style="margin-top:-104px;">
-          <h3>{{ 作品標題，例如：潮間帶 }}</h3>
-          <div class="work-coords">{{ 25.0330° N, 121.5654° E }}<br>{{ 地點名稱 · 2023 }}</div>
-        </div>
-
-        <div class="work-item wide reveal">
-          <div class="frame"><div class="ph"><span class="ph-label">作品照片 04<br>WORK-04.JPG（寬幅 21:9）</span></div></div>
-          <div class="work-caption">
-            <h3>{{ 作品標題，例如：無人之境 }}</h3>
-            <div class="work-coords">{{ 46.5197° N, 6.6323° E }}<br>{{ 地點名稱 · 2022 }}</div>
-          </div>
-        </div>
-
-        <div class="work-item reveal">
-          <div class="frame"><div class="ph"><span class="ph-label">作品照片 05<br>WORK-05.JPG（橫幅 16:9）</span></div></div>
-          <div class="work-caption">
-            <h3>{{ 作品標題，例如：霧季 }}</h3>
-            <div class="work-coords">{{ 23.4756° N, 120.9578° E }}<br>{{ 地點名稱 · 2022 }}</div>
-          </div>
-        </div>
-
-      </div>
+      <div class="work-grid" id="work-grid"></div>
     </div>
   </section>
 
-  <!-- ================= SERVICES ================= -->
   <section class="services" id="services">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2>接案服務</h2>
-        <p>報價依拍攝天數、地點與後製範圍而定，歡迎來信說明需求，將於 48 小時內回覆。</p>
+        <h2 data-field="services_section.title">接案服務</h2>
+        <p data-field="services_section.intro"></p>
       </div>
-      <div class="service-list reveal">
-        <div class="service">
-          <span class="num">SERVICE / 01</span>
-          <h3>旅拍紀實</h3>
-          <p>陪伴式跟拍，記錄旅程中的風景與真實時刻，適合個人旅拍、家庭旅遊或探險紀錄。</p>
-          <span class="tag">依天數報價</span>
-        </div>
-        <div class="service">
-          <span class="num">SERVICE / 02</span>
-          <h3>品牌與旅遊合作</h3>
-          <p>為旅遊業、戶外品牌與地方創生團隊提供風景與紀實影像，用於行銷、社群與出版。</p>
-          <span class="tag">專案報價</span>
-        </div>
-        <div class="service">
-          <span class="num">SERVICE / 03</span>
-          <h3>影像授權</h3>
-          <p>開放既有作品進行商業與出版用途授權，包含印刷品、明信片與空間裝置使用。</p>
-          <span class="tag">依用途報價</span>
-        </div>
-      </div>
+      <div class="service-list reveal" id="service-list"></div>
     </div>
   </section>
 
-  <!-- ================= PROCESS ================= -->
   <section class="process">
     <div class="wrap">
-      <div class="section-head reveal"><h2>合作流程</h2></div>
-      <div class="process-list reveal">
-        <div class="process-step">
-          <span class="num">01</span>
-          <h3>需求諮詢</h3>
-          <p>透過信件或電話了解拍攝目的、地點與時程。</p>
-        </div>
-        <div class="process-step">
-          <span class="num">02</span>
-          <h3>行程規劃</h3>
-          <p>依天候與光線條件規劃拍攝路線與備案。</p>
-        </div>
-        <div class="process-step">
-          <span class="num">03</span>
-          <h3>現場拍攝</h3>
-          <p>親自到場執行拍攝，彈性調整以捕捉最佳畫面。</p>
-        </div>
-        <div class="process-step">
-          <span class="num">04</span>
-          <h3>精修交付</h3>
-          <p>挑選、調色與交付高解析度檔案，附使用授權說明。</p>
-        </div>
-      </div>
+      <div class="section-head reveal"><h2 data-field="process_section.title">合作流程</h2></div>
+      <div class="process-list reveal" id="process-list"></div>
     </div>
   </section>
 
-  <!-- ================= CONTACT ================= -->
   <section class="contact" id="contact">
     <div class="wrap contact-grid">
       <div class="reveal">
-        <span class="eyebrow" style="margin-bottom:26px;">聯繫接案</span>
-        <h2>有拍攝計畫？<br>來聊聊吧。</h2>
-        <a class="contact-email" href="mailto:{{ your@email.com }}">{{ your@email.com }}</a>
+        <span class="eyebrow" style="margin-bottom:26px;" data-field="contact.eyebrow">聯繫接案</span>
+        <h2 data-field="contact.title">有拍攝計畫？<br>來聊聊吧。</h2>
+        <a class="contact-email" data-field="email" href="mailto:"></a>
         <ul class="contact-links">
-          <li><a href="https://instagram.com/{{ yourhandle }}" target="_blank" rel="noopener">Instagram — @{{ yourhandle }}</a></li>
-          <li><a href="{{ 其他作品平台連結 }}" target="_blank" rel="noopener">作品平台 / Behance</a></li>
-          <li>{{ 所在地區，例如：台中，台灣 }}</li>
+          <li><a data-field="instagram" href="#" target="_blank" rel="noopener"></a></li>
+          <li><a data-field="portfolio" href="#" target="_blank" rel="noopener"></a></li>
+          <li data-field="location"></li>
         </ul>
       </div>
 
-      <!-- Formspree：到 https://formspree.io 註冊後，將下方 YOUR_FORM_ID 換成你的 endpoint ID -->
       <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <input type="hidden" name="_subject" value="拍攝需求洽詢 — 地平線">
         <div class="field">
@@ -563,28 +476,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 <footer>
   <div class="wrap">
-    <span>© {{ 2026 }} {{ 你的名字 }}. All rights reserved.</span>
-    <span>地平線 Horizonline — 風景與旅拍攝影</span>
+    <span data-field="copyright"></span>
+    <span data-field="site_tagline"></span>
   </div>
 </footer>
 
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="js/content.js"></script>
 <script>
-// 捲動淡入
-const revealEls = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-  });
-}, {threshold:0.15});
-revealEls.forEach(el=>io.observe(el));
-
-// 太陽軌跡：依整頁捲動進度移動右側光點
 const sunDot = document.getElementById('sunDot');
 function updateSun(){
   const track = document.querySelector('.sun-track');
-  if(!track) return;
+  if(!track || !sunDot) return;
   const doc = document.documentElement;
-  const scrollPct = (doc.scrollTop) / (doc.scrollHeight - doc.clientHeight);
+  const scrollPct = (doc.scrollTop) / (doc.scrollHeight - doc.clientHeight || 1);
   const trackHeight = track.clientHeight;
   const pos = Math.min(Math.max(scrollPct,0),1) * trackHeight;
   sunDot.style.top = pos + 'px';
@@ -592,6 +497,16 @@ function updateSun(){
 document.addEventListener('scroll', updateSun, {passive:true});
 window.addEventListener('resize', updateSun);
 updateSun();
+
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on('init', function (user) {
+    if (!user) {
+      window.netlifyIdentity.on('login', function () {
+        document.location.href = '/admin/';
+      });
+    }
+  });
+}
 </script>
 
 </body>

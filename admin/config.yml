@@ -1,0 +1,129 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: assets/images
+public_folder: /assets/images
+
+locale: zh_Hant
+
+collections:
+  - name: site
+    label: 網站內容
+    files:
+      - file: content/site.json
+        name: content
+        label: 全站文案與作品
+        fields:
+          - { label: 網站名稱, name: site_name, widget: string }
+          - { label: 頁尾標語, name: site_tagline, widget: string }
+          - { label: SEO 標題, name: seo_title, widget: string }
+          - { label: SEO 描述, name: seo_description, widget: text }
+          - { label: 社群分享圖（建議完整網址）, name: og_image, widget: string, required: false }
+          - { label: 攝影師名字, name: photographer_name, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: Instagram 帳號（不含 @）, name: instagram, widget: string }
+          - { label: 作品平台網址, name: portfolio_url, widget: string, required: false }
+          - { label: 作品平台顯示文字, name: portfolio_label, widget: string, required: false }
+          - { label: 所在地區, name: location, widget: string }
+          - { label: Formspree 表單 ID, name: formspree_id, widget: string, hint: "例如 xxxxxxxx，來自 formspree.io" }
+
+          - label: Hero 首屏
+            name: hero
+            widget: object
+            fields:
+              - { label: 眉標, name: eyebrow, widget: string }
+              - { label: 座標, name: coords, widget: string }
+              - { label: 據點說明, name: base, widget: string }
+              - { label: 標題前段, name: title_before, widget: string }
+              - { label: 標題斜體字, name: title_em, widget: string }
+              - { label: 標題後段, name: title_after, widget: string }
+              - { label: 副標（名字後面的描述）, name: subtitle, widget: text }
+              - { label: 捲動提示, name: scroll_cue, widget: string }
+              - { label: 成立年份, name: established, widget: string }
+
+          - label: 關於我
+            name: about
+            widget: object
+            fields:
+              - { label: 肖像照片, name: portrait, widget: image, required: false }
+              - { label: 肖像替代文字, name: portrait_alt, widget: string, required: false }
+              - { label: 引言, name: lead, widget: text }
+              - { label: 段落一, name: body_1, widget: text }
+              - { label: 段落二, name: body_2, widget: text }
+              - { label: 統計1 數字, name: stat_1_value, widget: string }
+              - { label: 統計1 標籤, name: stat_1_label, widget: string }
+              - { label: 統計2 數字, name: stat_2_value, widget: string }
+              - { label: 統計2 標籤, name: stat_2_label, widget: string }
+              - { label: 統計3 數字, name: stat_3_value, widget: string }
+              - { label: 統計3 標籤, name: stat_3_label, widget: string }
+
+          - label: 作品區標題
+            name: work_section
+            widget: object
+            fields:
+              - { label: 標題, name: title, widget: string }
+              - { label: 說明, name: intro, widget: text }
+
+          - label: 作品列表
+            name: works
+            widget: list
+            summary: "{{title}}（{{layout}}）"
+            fields:
+              - label: 版型
+                name: layout
+                widget: select
+                options:
+                  - { label: 單張橫幅 16:9, value: single }
+                  - { label: 雙直幅 4:5, value: pair }
+                  - { label: 寬幅 21:9, value: wide }
+              - { label: 主圖, name: image, widget: image, required: false }
+              - { label: 主圖說明, name: image_alt, widget: string, required: false }
+              - { label: 第二張圖（僅雙直幅）, name: image_2, widget: image, required: false }
+              - { label: 第二張圖說明, name: image_2_alt, widget: string, required: false }
+              - { label: 作品標題, name: title, widget: string }
+              - { label: 座標, name: coords, widget: string, required: false }
+              - { label: 地點與年份, name: place, widget: string, required: false }
+
+          - label: 服務區標題
+            name: services_section
+            widget: object
+            fields:
+              - { label: 標題, name: title, widget: string }
+              - { label: 說明, name: intro, widget: text }
+
+          - label: 服務項目
+            name: services
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { label: 編號, name: num, widget: string }
+              - { label: 標題, name: title, widget: string }
+              - { label: 說明, name: description, widget: text }
+              - { label: 標籤, name: tag, widget: string }
+
+          - label: 流程區標題
+            name: process_section
+            widget: object
+            fields:
+              - { label: 標題, name: title, widget: string }
+
+          - label: 合作流程
+            name: process
+            widget: list
+            summary: "{{num}} {{title}}"
+            fields:
+              - { label: 編號, name: num, widget: string }
+              - { label: 標題, name: title, widget: string }
+              - { label: 說明, name: description, widget: text }
+
+          - label: 聯繫區
+            name: contact
+            widget: object
+            fields:
+              - { label: 眉標, name: eyebrow, widget: string }
+              - { label: 標題第一行, name: title_line1, widget: string }
+              - { label: 標題第二行, name: title_line2, widget: string }
+              - { label: 版權年份, name: copyright_year, widget: string }

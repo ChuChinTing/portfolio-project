@@ -1,0 +1,133 @@
+{
+  "site_name": "地平線 Horizonline",
+  "site_tagline": "地平線 Horizonline — 風景與旅拍攝影",
+  "seo_title": "地平線 · 風景與旅拍攝影作品集",
+  "seo_description": "風景與旅拍攝影作品集。記錄山徑、海岸與異地城市的光線與地形。",
+  "og_image": "",
+  "photographer_name": "你的名字",
+  "email": "your@email.com",
+  "instagram": "yourhandle",
+  "portfolio_url": "https://behance.net/",
+  "portfolio_label": "作品平台 / Behance",
+  "location": "台中，台灣",
+  "formspree_id": "YOUR_FORM_ID",
+  "hero": {
+    "eyebrow": "風景 · 旅拍攝影",
+    "coords": "23.6978° N, 120.9605° E",
+    "base": "你的拍攝據點 / 台灣",
+    "title_before": "在世界的",
+    "title_em": "邊界",
+    "title_after": "與光線相遇",
+    "subtitle": "長期於山徑、海岸與異地城市間移動的風景攝影師。用鏡頭記錄地形的呼吸與旅程中稍縱即逝的光。",
+    "scroll_cue": "向下捲動，進入作品集",
+    "established": "2019"
+  },
+  "about": {
+    "portrait": "",
+    "portrait_alt": "攝影師肖像",
+    "lead": "我相信風景不是被拍下來的，而是被走過、被等待、被理解之後，才被交出來的。",
+    "body_1": "從城市／國家出發，這些年走過許多國家與無數條山路。我的作品專注於自然地景中光線、天氣與尺度的變化，也記錄旅途中人與土地相處的痕跡。",
+    "body_2": "每一次拍攝都是一次長時間的停留——等一道雲隙光、一場退潮，或是一個當地人願意分享的日常。",
+    "stat_1_value": "42",
+    "stat_1_label": "國家 / 地區",
+    "stat_2_value": "8",
+    "stat_2_label": "年 · 拍攝經驗",
+    "stat_3_value": "30",
+    "stat_3_label": "品牌合作案"
+  },
+  "work_section": {
+    "title": "精選作品",
+    "intro": "依拍攝地點與時間標記，每一幀都附上實際座標——如同影像的出生證明。"
+  },
+  "works": [
+    {
+      "layout": "single",
+      "image": "",
+      "image_alt": "作品照片 01",
+      "title": "稜線之上",
+      "coords": "24.1477° N, 121.1785° E",
+      "place": "地點名稱 · 2024"
+    },
+    {
+      "layout": "pair",
+      "image": "",
+      "image_alt": "作品照片 02",
+      "image_2": "",
+      "image_2_alt": "作品照片 03",
+      "title": "潮間帶",
+      "coords": "25.0330° N, 121.5654° E",
+      "place": "地點名稱 · 2023"
+    },
+    {
+      "layout": "wide",
+      "image": "",
+      "image_alt": "作品照片 04",
+      "title": "無人之境",
+      "coords": "46.5197° N, 6.6323° E",
+      "place": "地點名稱 · 2022"
+    },
+    {
+      "layout": "single",
+      "image": "",
+      "image_alt": "作品照片 05",
+      "title": "霧季",
+      "coords": "23.4756° N, 120.9578° E",
+      "place": "地點名稱 · 2022"
+    }
+  ],
+  "services_section": {
+    "title": "接案服務",
+    "intro": "報價依拍攝天數、地點與後製範圍而定，歡迎來信說明需求，將於 48 小時內回覆。"
+  },
+  "services": [
+    {
+      "num": "SERVICE / 01",
+      "title": "旅拍紀實",
+      "description": "陪伴式跟拍，記錄旅程中的風景與真實時刻，適合個人旅拍、家庭旅遊或探險紀錄。",
+      "tag": "依天數報價"
+    },
+    {
+      "num": "SERVICE / 02",
+      "title": "品牌與旅遊合作",
+      "description": "為旅遊業、戶外品牌與地方創生團隊提供風景與紀實影像，用於行銷、社群與出版。",
+      "tag": "專案報價"
+    },
+    {
+      "num": "SERVICE / 03",
+      "title": "影像授權",
+      "description": "開放既有作品進行商業與出版用途授權，包含印刷品、明信片與空間裝置使用。",
+      "tag": "依用途報價"
+    }
+  ],
+  "process_section": {
+    "title": "合作流程"
+  },
+  "process": [
+    {
+      "num": "01",
+      "title": "需求諮詢",
+      "description": "透過信件或電話了解拍攝目的、地點與時程。"
+    },
+    {
+      "num": "02",
+      "title": "行程規劃",
+      "description": "依天候與光線條件規劃拍攝路線與備案。"
+    },
+    {
+      "num": "03",
+      "title": "現場拍攝",
+      "description": "親自到場執行拍攝，彈性調整以捕捉最佳畫面。"
+    },
+    {
+      "num": "04",
+      "title": "精修交付",
+      "description": "挑選、調色與交付高解析度檔案，附使用授權說明。"
+    }
+  ],
+  "contact": {
+    "eyebrow": "聯繫接案",
+    "title_line1": "有拍攝計畫？",
+    "title_line2": "來聊聊吧。",
+    "copyright_year": "2026"
+  }
+}
